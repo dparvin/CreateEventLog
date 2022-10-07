@@ -4,13 +4,25 @@ using System.Windows.Forms;
 
 namespace CreateEventLog
 {
+    /// <summary>
+    /// A Windows form used to create an event log.
+    /// </summary>
+    /// <seealso cref="Form" />
     public partial class CreateLog : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateLog"/> class.
+        /// </summary>
         public CreateLog()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the Click event of the btnOK control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtLogName.Text))
@@ -35,6 +47,11 @@ namespace CreateEventLog
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the btnCancel control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
